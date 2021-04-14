@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+
+{% block head %}
+<title>House Price</title>
+{% endblock %}
+{% block body %}
+<form action="/price" method='POST'>
+	Income:<input class="form-control" type="Number" name="Income" placeholder="Income" value="69000">
+	<br>
+	House Age:<input class="form-control" type="Number" name="House" placeholder="House Age" value="8">
+	<br>
+	Number of Rooms:<input class="form-control" type="Number" name="Rooms" placeholder="Number of Rooms" value="4">
+	<br>
+	Number of BedRooms:<input class="form-control" type="Number" name="BedRooms" placeholder="Number of BedRooms" value="2">
+	<br>
+	Area Population:<input class="form-control" type="Number" name="Population" placeholder="Area Population" value="80000">
+	<br>
+	<center><input  class="btn btn-success" type="submit" value="Predict"></center>
+</form>
+<hr>
+
+<p class="display-4">The House Price is: ${{prices}}</p>
+
+{% endblock %}
