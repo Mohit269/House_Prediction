@@ -9,9 +9,6 @@ colorama==0.4.4
 numpy
 pandas 
 cufflinks==0.17.3
-Flask==1.1.2
-Flask-RESTful==0.3.8
-Flask-SQLAlchemy==2.4.4
 joblib==0.17.0
 scikit-learn==0.23.2
 seaborn==0.11.0
