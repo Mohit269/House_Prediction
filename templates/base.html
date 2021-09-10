@@ -4,7 +4,34 @@
 <title>House Price</title>
 {% endblock %}
 {% block body %}
-<form action="/price" method='POST'>
+<style type="text/css">
+	body{
+		background-color: #9D9D9D;
+		font-family: 'Nunito', sans-serif;
+	}
+	.box {
+
+  max-width: 400px;
+    background: white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px -5px black;
+  margin-left: 550px;
+  margin-top: 40px;
+  padding: 30px 30px 30px 30px;
+}
+.display {
+
+  max-width: 400px;
+  background-color: white;
+  border-radius: 40px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 5px 5px 15px -5px black;
+  margin-left: 550px;
+  padding: 30px 30px 30px 30px;
+}
+</style>
+<form class="box" action="/price" method='POST'>
 	Income:<input class="form-control" type="Number" name="Income" placeholder="Income" value="69000">
 	<br>
 	House Age:<input class="form-control" type="Number" name="House" placeholder="House Age" value="8">
@@ -16,9 +43,8 @@
 	Area Population:<input class="form-control" type="Number" name="Population" placeholder="Area Population" value="80000">
 	<br>
 	<center><input  class="btn btn-success" type="submit" value="Predict"></center>
-</form>
-<hr>
+</form><br>
 
-<p class="display-4">The House Price is: ${{prices}}</p>
+<p  class="display" autofocus>The House Price is: ${{prices}}</p>
 
 {% endblock %}
